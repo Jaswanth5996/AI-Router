@@ -296,6 +296,6 @@ def health_check():
 CORS(app, origins=["http://localhost:3000", "http://127.0.0.1:3000", "https://ai-router-three.vercel.app/"])
 
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))  # Use Render's port or fallback to 5000
     app.run(host='0.0.0.0', port=port)
